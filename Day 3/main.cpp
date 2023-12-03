@@ -48,25 +48,13 @@ int getAdjacent(std::string input){
             for (int x = i - 1; x <= i + 1; x++) {
                 for (int y = j - 1; y <= j + 1; y++) {
                     if (x >= 0 && x < 140 && y >= 0 && y < 140 && !(x == i && y == j)) {
-                        if (symbols[x][y] == '*') {
-                            is_adjacent = true;
-                        }
-                        if (symbols[x][y] == '#') {
-                            is_adjacent = true;
-                        }
-                        if (symbols[x][y] == '+') {
+                        if (symbols[x][y] == '@') {
                             is_adjacent = true;
                         }
                         if (symbols[x][y] == '$') {
                             is_adjacent = true;
                         }
-                        if (symbols[x][y] == '@') {
-                            is_adjacent = true;
-                        }
-                        if (symbols[x][y] == '%') {
-                            is_adjacent = true;
-                        }
-                        if (symbols[x][y] == '/') {
+                        if (symbols[x][y] == '*') {
                             is_adjacent = true;
                         }
                         if (symbols[x][y] == '=') {
@@ -75,7 +63,16 @@ int getAdjacent(std::string input){
                         if (symbols[x][y] == '&') {
                             is_adjacent = true;
                         }
+                        if (symbols[x][y] == '/') {
+                            is_adjacent = true;
+                        }
                         if (symbols[x][y] == '-') {
+                            is_adjacent = true;
+                        }
+                        if (symbols[x][y] == '#') {
+                            is_adjacent = true;
+                        }
+                        if (symbols[x][y] == '%') {
                             is_adjacent = true;
                         }
                     }
@@ -97,8 +94,4 @@ int getAdjacent(std::string input){
 
     std::cout << "total: " << total << std::endl;
     return total;
-}
-
-int getTwoPart(std::string input){
-    
 }
